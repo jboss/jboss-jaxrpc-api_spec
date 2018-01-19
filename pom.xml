@@ -6,7 +6,7 @@
   <parent>
     <groupId>org.jboss</groupId>
     <artifactId>jboss-parent</artifactId>
-    <version>9</version>
+    <version>25</version>
   </parent>
 
   <groupId>org.jboss.spec.javax.xml.rpc</groupId>
@@ -83,7 +83,10 @@
             <manifest>
               <addDefaultSpecificationEntries>false</addDefaultSpecificationEntries>
             </manifest>
-          </archive>
+            <manifestEntries>
+              <Automatic-Module-Name>beta.jboss.jaxrpc.api_1_1</Automatic-Module-Name>
+            </manifestEntries>
+        </archive>
           <instructions>
             <Specification-Title>JSR-101: Java(TM) API for XML-based RPC (JAX-RPC) 1.1</Specification-Title>
             <Specification-Vendor>Oracle</Specification-Vendor>
@@ -126,8 +129,9 @@
   <dependencies>
     <dependency>
       <groupId>org.jboss.spec.javax.servlet</groupId>
-      <artifactId>jboss-servlet-api_3.0_spec</artifactId>
-      <version>1.0.1.Final</version>
+      <artifactId>jboss-servlet-api_3.1_spec</artifactId>
+      <version>1.0.2.Final</version>
+      <optional>true</optional>
     </dependency>
   </dependencies>
 
